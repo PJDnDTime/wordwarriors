@@ -22,8 +22,12 @@
 $.ajaxSetup ({
   // Disable caching of AJAX responses
   cache: false
-});
+}); 
+function initDatastream() {
 $('#data').load('https://docs.google.com/spreadsheets/d/e/2PACX-1vQw8cK8wdaH82aU1DnnAOO8LPiZiLtKQKRLhCHu30y9CCX9-RGO-MXaU38c4Drgf_pwN2uUqU33tnU8/pub?gid=480879645&single=true&output=tsv');
+}
+initDatastream();
+setInterval(initDatastream, 2000); // 2 seconds refresh rate
 </script>
 
 </body>
