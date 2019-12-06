@@ -16,18 +16,124 @@
 </style>
 <body>
 
-<span id="data"></span>
+<span class='animated-letter tada' id="1"></span>
+<span class='animated-letter tada' id="2"></span>
+<span class='animated-letter tada' id="3"></span>
+<span class='animated-letter tada' id="4"></span>
+<span class='animated-letter tada' id="5"></span>
+<span class='animated-letter tada' id="6"></span>
+<span class='animated-letter tada' id="7"></span>
+<span class='animated-letter tada' id="8"></span>
+<span class='animated-letter tada' id="9"></span>
+<span class='animated-letter tada' id="10"></span>
+<span class='animated-letter tada' id="11"></span>
+<span class='animated-letter tada' id="12"></span>
+<span class='animated-letter tada' id="13"></span>
+<span class='animated-letter tada' id="14"></span>
+<span class='animated-letter tada' id="15"></span>
+<span class='animated-letter tada' id="16"></span>
+<span class='animated-letter tada' id="17"></span>
+<span class='animated-letter tada' id="18"></span>
+<span class='animated-letter tada' id="19"></span>
+<span class='animated-letter tada' id="20"></span>
+<span class='animated-letter tada' id="21"></span>
+<span class='animated-letter tada' id="22"></span>
+<span class='animated-letter tada' id="23"></span>
+<span class='animated-letter tada' id="24"></span>
+<span class='animated-letter tada' id="25"></span>
+<span class='animated-letter tada' id="26"></span>
+<span class='animated-letter tada' id="27"></span>
+<span class='animated-letter tada' id="28"></span>
+<span class='animated-letter tada' id="29"></span>
+<span class='animated-letter tada' id="30"></span>
+<span class='animated-letter tada' id="31"></span>
+<span class='animated-letter tada' id="32"></span>
+<span class='animated-letter tada' id="33"></span>
+<span class='animated-letter tada' id="34"></span>
+<span class='animated-letter tada' id="35"></span>
+<span class='animated-letter tada' id="36"></span>
+<span class='animated-letter tada' id="37"></span>
+<span class='animated-letter tada' id="38"></span>
+<span class='animated-letter tada' id="39"></span>
+<span class='animated-letter tada' id="40"></span>
+<span class='animated-letter tada' id="41"></span>
+<span class='animated-letter tada' id="42"></span>
+<span class='animated-letter tada' id="43"></span>
+<span class='animated-letter tada' id="44"></span>
+<span class='animated-letter tada' id="45"></span>
+<span class='animated-letter tada' id="46"></span>
+<span class='animated-letter tada' id="47"></span>
+<span class='animated-letter tada' id="48"></span>
+<span class='animated-letter tada' id="49"></span>
+<span class='animated-letter tada' id="50"></span>
 
 <script>
-$.ajaxSetup ({
-  // Disable caching of AJAX responses
-  cache: false
-}); 
 function initDatastream() {
-$('#data').load('https://docs.google.com/spreadsheets/d/e/2PACX-1vQw8cK8wdaH82aU1DnnAOO8LPiZiLtKQKRLhCHu30y9CCX9-RGO-MXaU38c4Drgf_pwN2uUqU33tnU8/pub?gid=480879645&single=true&output=tsv');
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      parseFeed(this);
+    }
+  }
+  xhttp.open("GET", "https://spreadsheets.google.com/feeds/cells/1pCGH0oxVbkOK4iLmbcmo3I44bWN2drFXhrlIMDioVfU/2/public/values");
+  xhttp.send();
 }
+function parseFeed(xml) {
+  var xmlDoc = xml.responseXML;
+document.getElementById("1").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='1' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("2").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='2' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("3").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='3' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("4").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='4' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("5").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='5' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("6").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='6' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("7").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='7' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("8").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='8' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("9").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='9' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("10").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='10' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("11").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='11' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("12").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='12' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("13").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='13' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("14").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='14' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("15").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='15' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("16").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='16' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("17").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='17' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("18").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='18' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("19").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='19' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("20").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='20' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("21").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='21' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("22").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='22' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("23").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='23' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("24").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='24' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("25").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='25' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("26").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='26' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("27").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='27' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("28").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='28' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("29").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='29' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("30").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='30' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("31").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='31' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("32").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='32' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("33").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='33' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("34").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='34' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("35").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='35' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("36").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='36' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("37").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='37' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("38").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='38' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("39").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='39' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("40").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='40' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("41").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='41' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("42").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='42' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("43").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='43' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("44").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='44' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("45").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='45' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("46").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='46' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("47").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='47' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("48").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='48' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("49").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='49' col='1'")[0].childNodes[0].nodeValue;
+document.getElementById("50").innerHTML = xmlDoc.getElementsByTagName("gs:cell row='50' col='1'")[0].childNodes[0].nodeValue;
+}
+// on first page load, initialize and start refresh interval
 initDatastream();
-setInterval(initDatastream, 2000); // 2 seconds refresh rate
+setInterval(initDatastream, 2000); // 2 seconds.
 </script>
 
 </body>
