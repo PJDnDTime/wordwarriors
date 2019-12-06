@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="text-animations.css">
+</head>
+<style>
+.resize {
+  max-width: 100px;
+  max-height: 100px;
+  min-height: 90px;
+  width: expression(this.width > 100 ? "100px" : true);
+  height: expression(this.height > 100 ? "100px" : true);
+  padding: 7.5px;
+}
+</style>
+<body>
+
+<span id="data"></span>
+
+<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.4CFxRrSvxq0.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCNk69adtZYbtfIwiKKtklVg1Iw-vg/cb=gapi.loaded_0" async=""></script><script src="https://apis.google.com/js/api.js" type="text/javascript" gapi_processed="true">
+</script> 
+<script type="text/javascript">
+gapi.load('auth2', function() {
+	// Library loaded.
+});
+</script> 
+<script>
+function initDatastream() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      parseFeed(this);
+    }
+  }
+  xhttp.open("GET", "https://spreadsheets.google.com/feeds/list/1pCGH0oxVbkOK4iLmbcmo3I44bWN2drFXhrlIMDioVfU/2/public/full/cokwr");
+  xhttp.send();
+}
+function parseFeed(xml) {
+  var xmlDoc = xml.responseXML;
+  document.getElementById("data").innerHTML = xmlDoc.getElementsByTagName("gsx:c01")[0].childNodes[0].nodeValue;
+}
+// on first page load, initialize and start refresh interval
+initDatastream();
+setInterval(initDatastream, 2000); // 2 seconds.
+</script>
+
+</body>
+</html>

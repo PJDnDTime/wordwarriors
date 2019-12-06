@@ -15,8 +15,8 @@
     100% { transform: scale3d(1, 1, 1); }
 }
 .tada {
-            animation: tada 2s infinite; 
-    -webkit-animation: tada 2s infinite;
+            animation: tada 3s infinite; 
+    -webkit-animation: tada 3s infinite;
 }
 
 .animated-letter { display: inline-block; }
